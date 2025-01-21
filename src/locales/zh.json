@@ -1,0 +1,109 @@
+{
+    "start": {
+      "text": "你睁开眼睛，感到疲惫不堪，面对镜子中的自己，心中充满厌恶。",
+      "choices": [
+        { "text": "试图整理心情，准备去上课", "next": "classroom" },
+        { "text": "继续坐在床上发呆，什么也不想做", "next": "despair" }
+      ]
+    },
+    "classroom": {
+      "text": "你来到教室，物理老师点名让你上台解题，但你完全不知所措。",
+      "choices": [
+        { "text": "努力尝试解答", "next": "try_solution" },
+        { "text": "沉默不语，低下头", "next": "shame" }
+      ]
+    },
+    "despair": {
+      "text": "你坐在床上，觉得自己完全失败了，迟到的惩罚让你更焦虑。",
+      "choices": [
+        { "text": "还是勉强去上课", "next": "classroom" },
+        { "text": "决定请假，逃避一天", "next": "avoidance" }
+      ]
+    },
+    "try_solution": {
+        "text": "你努力尝试解答，但发现自己无法解决这道题，老师严厉地批评了你。你感到非常难堪，头脑一片空白。",
+        "choices": [
+          { "text": "坚持站着直到下课", "next": "after_class" },
+          { "text": "低声道歉后回到座位", "next": "shame" }
+        ]
+      },
+      "after_class": {
+        "text": "下课后，你默默地回到座位，感到筋疲力尽。一位平时关系不深的同学过来对你说了一句‘别放在心上’，这让你感到一丝温暖。",
+        "choices": [
+          { "text": "鼓起勇气说‘谢谢’", "next": "end_success" },
+          { "text": "勉强挤出微笑，不再回应", "next": "after_school" }
+        ]
+      },
+      
+    "shame": {
+      "text": "你低下头，感觉全班的目光都在嘲笑你，你的自尊受到重创。",
+      "choices": [
+        { "text": "假装镇定，等待下课", "next": "end_normal" },
+        { "text": "直接跑出教室", "next": "avoidance" }
+      ]
+    },
+    "avoidance": {
+      "text": "你选择逃避，但这种逃避并不能缓解你的痛苦，你的内心充满绝望。",
+      "choices": [
+        { "text": "反思并试图重新面对", "next": "classroom" },
+        { "text": "完全放弃，陷入更深的自责", "next": "end_bad" }
+      ]
+    },
+    "end_success": {
+        "text": "虽然你感到极大的压力，但你坚持了下来，下课后，一位同学对你表示关心，这让你感到一丝温暖。",
+        "education": "坚持并寻求支持是帮助抑郁症患者的重要方式。即便一丝善意，也可能改变一个人的世界。"
+      },
+      "end_normal": {
+        "text": "你勉强熬到了下课，但内心仍然充满挫败感，你觉得一切都没有改变。",
+        "education": "抑郁症患者常在努力后感到挫败，但这是康复过程的一部分，耐心和支持是关键。"
+      },
+      "end_bad": {
+        "text": "你完全放弃了自己，陷入了深深的绝望，没有人理解你，你感到自己被世界遗弃。",
+        "education": "抑郁症患者常有绝望感，但及时寻求心理帮助可能挽救生命。关爱和倾听至关重要。"
+      },
+      "after_school": {
+        "text": "放学后，你独自走在回家的路上，耳边响起其他同学的欢声笑语。你却觉得自己与这个世界格格不入。",
+        "choices": [
+          { "text": "尝试给朋友发消息", "next": "friend_response" },
+          { "text": "低头快速走回家", "next": "at_home" }
+        ]
+      },
+      "friend_response": {
+        "text": "你发了一条消息：'在吗？' 对方几分钟后回了一个忙碌的表情，你顿时感到失落。",
+        "choices": [
+          { "text": "告诉自己不要再麻烦别人", "next": "end_bad" },
+          { "text": "继续坚持，试图和对方聊天", "next": "small_relief" }
+        ]
+      },
+      "small_relief": {
+        "text": "虽然对方并没有深聊，但你的内心感觉好了一点点。也许你并非完全被忽视。",
+        "choices": [
+          { "text": "回家继续学习", "next": "at_home" },
+          { "text": "发呆到深夜", "next": "night_crisis" }
+        ]
+      },
+      "night_crisis": {
+        "text": "深夜，你坐在床上，脑海中一片混乱。各种负面情绪涌上心头，让你几乎无法呼吸。",
+        "choices": [
+          { "text": "拨打心理热线", "next": "call_hotline" },
+          { "text": "决定忍受，什么也不做", "next": "end_bad" }
+        ]
+      },
+      "call_hotline": {
+        "text": "你拨通了心理热线，一个温暖的声音安慰了你。你终于觉得，自己并不是一个人。",
+        "education": "心理热线可以帮助抑郁症患者缓解当下的危机，及时寻求帮助非常重要。",
+        "choices": [
+          { "text": "重新开始游戏", "next": "start" }
+        ]
+      },
+      "at_home": {
+        "text": "你回到了家，母亲正忙着照顾弟弟，而你感到被忽视，独自躺在床上发呆。",
+        "choices": [
+          { "text": "闭上眼睛睡觉", "next": "night_crisis" },
+          { "text": "试图向母亲倾诉", "next": "end_normal" }
+        ]
+      }
+      
+      
+  }
+  
